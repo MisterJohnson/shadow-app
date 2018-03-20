@@ -1,0 +1,19 @@
+<div class="container">
+  <h1>Character List</h1>
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Alias</th>
+      <th>Current Karma</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let character of characters">
+      <td>{{ character.name }}</td>
+      <td>{{ character.alias }}</td>
+      <td>{{ character.current_karma }} karma</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
