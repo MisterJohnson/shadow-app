@@ -6,6 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { CharacterComponent } from './character/character.component';
+import { HomeComponent } from './home/home.component';
 
 const appRoutes: Routes = [
   {
@@ -13,16 +14,21 @@ const appRoutes: Routes = [
     component: CharacterComponent,
     data: { title: 'Character List' }
   },
-  { path: '',
+  { path: 'characters',
     redirectTo: '/characters',
     pathMatch: 'full'
+  },
+  { path: 'home',
+    component: HomeComponent,
+    data: { title : 'Welcome to the sixth world' }
   }
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    CharacterComponent
+    CharacterComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
