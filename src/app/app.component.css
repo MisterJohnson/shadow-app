@@ -1,6 +1,8 @@
+@import "../assets/fonts/stylesheet.css";
+
 h1 {
   margin: 0 0 18px;
-  font-family: sans-serif;
+  font-family: 'robotolight', sans-serif;
   font-size: 43px;
   font-weight: 500;
   line-height: 47px;
