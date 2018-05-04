@@ -1,19 +1,17 @@
 <div class="articles">
-  <article>
-    <h3>Shadowrun's news the developers have publish!</h3>
+  <hr />
+  <article *ngFor="let article of articles">
+    <h3>{{article.title}}</h3>
     <span class="thumbnails">
-            <img src="../../assets/images/shadow_thumbnail.jpg" alt="shadowrun logo"/>
+            <img src="{{article.assets}}" alt="shadowrun logo"/>
     </span>
-    <p>
-      After the latest book release, Forbidden Arcana, we finally have news about the next release! It's about the
-      infamous Technomancer, <strong>Mainstream Resonance</strong>.
-      Now, this book will expand your option for your Technomancer, to his current stream, to his compiled friends. Take
-      a dive into the foundation like never before!
+    <p class="description">
+
     </p>
-    <span class="metadata">
-            <strong>The 6th april 2018</strong>
-            <a href="/news">news</a>
-            <a href="/books">books</a>
-          </span>
+    <div class="metadata">
+      <strong>{{article.date}}</strong>
+      <a *ngFor="let cat of article.metadata" href="/{{cat}}">{{cat}}</a>
+    </div>
   </article>
+  <hr />
 </div>

@@ -13,7 +13,7 @@ export class ArticlesComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
-    this.http.get('/articles').subscribe(data => {
+    this.http.get('/article').subscribe(data => {
       this.articles = data;
     });
   }

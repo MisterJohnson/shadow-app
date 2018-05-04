@@ -1,0 +1,41 @@
+div.articles article {
+  width: 100%;
+  margin: 0 10px;
+}
+
+div.articles hr {
+  border: 1px solid #9F9F9F;
+}
+
+.thumbnails {
+  width: 21%;
+}
+
+.description {
+  margin: 0 10px;
+  width: 70%;
+}
+
+.thumbnails, .description {
+  float: left;
+}
+
+.metadata {
+  padding-top: 10px;
+  clear: both;
+  color: #666;
+}
+
+.metadata strong {
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.metadata a {
+  color: #666;
+  font-size: 12px;
+  font-weight: normal;
+  border-radius: 12px;
+  padding: 3px 4px;
+  border: 1px solid #9F9F9F;
+}

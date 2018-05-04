@@ -12,6 +12,7 @@ mongoose.connect('mongodb://simonlepage:Jackpot50@shadowrun-shard-00-00-g1ocb.mo
   .catch((err) => console.error(err));
 
 var character = require('./routes/character');
+var article = require('./routes/article');
 var app = express();
 
 app.use(logger('dev'));
@@ -21,6 +22,7 @@ app.use(express.static(path.join(__dirname, 'dist')));
 app.use('/characters', express.static(path.join(__dirname, 'dist')));
 app.use('/*', express.static(path.join(__dirname, 'dist')));
 app.use('/character', character);
+app.use('/article', article);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

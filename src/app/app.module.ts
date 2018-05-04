@@ -9,6 +9,8 @@ import { CharacterComponent } from './character/character.component';
 import { HomeComponent } from './home/home.component';
 import { ArticlesComponent } from './components/articles/articles.component';
 
+import { ArticleService } from './services/article.service';
+
 const appRoutes: Routes = [
   {
     path: 'characters',
@@ -41,7 +43,7 @@ const appRoutes: Routes = [
       { enableTracing: true } // <-- debugging purposes only
     )
   ],
-  providers: [],
+  providers: [ArticleService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
