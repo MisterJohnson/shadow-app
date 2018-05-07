@@ -1,9 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
-var Articles = require('../models/Article.js');
-
-module.exports = router;
+var Articles = require('../models/Articles.js');
 
 /* GET all Articles */
 router.get('/', function(req, res, next) {
@@ -15,8 +13,10 @@ router.get('/', function(req, res, next) {
 
 /* GET single Article by ID */
 router.get('/:id', function(req, res, next) {
-  Articles.findById(req.params.id, function (err, post) {
+  Articles.findById(req.params.id, function (err, article) {
     if (err) return next(err);
-    res.json(post);
+    res.json(article);
   });
 });
+
+module.exports = router;

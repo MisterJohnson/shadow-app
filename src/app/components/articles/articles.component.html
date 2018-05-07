@@ -5,11 +5,10 @@
     <span class="thumbnails">
             <img src="{{article.assets}}" alt="shadowrun logo"/>
     </span>
-    <p class="description">
-
+    <p class="description" [innerHTML]="article.description">
     </p>
     <div class="metadata">
-      <strong>{{article.date}}</strong>
+      <strong>{{article.date | date:'MM/dd/yyyy'}}</strong>
       <a *ngFor="let cat of article.metadata" href="/{{cat}}">{{cat}}</a>
     </div>
   </article>
