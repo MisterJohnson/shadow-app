@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { ArticlesComponent } from './components/articles/articles.component';
 
 import { ArticleService } from './services/article.service';
+import { MenuComponent } from './components/menu/menu.component';
 
 const appRoutes: Routes = [
   {
@@ -32,7 +33,8 @@ const appRoutes: Routes = [
     AppComponent,
     CharacterComponent,
     HomeComponent,
-    ArticlesComponent
+    ArticlesComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
