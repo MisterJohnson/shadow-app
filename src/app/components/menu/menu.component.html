@@ -1,10 +1,14 @@
 <div class="navbar">
   <ul class="nav">
-    <li class="current">
-      <a href="./home">Home</a>
+    <li>
+      <a [routerLink]="['']" [routerLinkActive]="['active']" >
+        Home
+      </a>
     </li>
     <li>
-      <a href="./character">Character</a>
+      <a [routerLink]="['characters']" [routerLinkActive]="['active']" >
+        Character
+      </a>
     </li>
     <li>
       <a href="./newsfeed">JackPoint</a>

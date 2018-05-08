@@ -1,0 +1,25 @@
+.nav {
+  padding-left: 3px;
+}
+
+ul li {
+  font-family: 'robotoregular', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  display: inline-block;
+  font-size: 14px;
+  border: solid #f2f6f6 1px;
+  margin-left: -4px;
+}
+
+li:hover {
+  border: solid #00b874 1px !important;
+  margin-left: 0 !important;
+}
+
+.active {
+  border: solid #00b874 1px !important;
+}
+.active a {
+  color: #00b874;
+}

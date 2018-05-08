@@ -5,8 +5,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { CharacterComponent } from './character/character.component';
-import { HomeComponent } from './home/home.component';
+import { CharacterComponent } from './sections/character/character.component';
+import { HomeComponent } from './sections/home/home.component';
 import { ArticlesComponent } from './components/articles/articles.component';
 
 import { ArticleService } from './services/article.service';

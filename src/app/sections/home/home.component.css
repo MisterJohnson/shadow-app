@@ -17,7 +17,7 @@ body {
 .header {
   padding-top: 164px;
   text-align: center;
-  background-image: url("../../assets/images/full_art.jpg");
+  background-image: url("../../../assets/images/full_art.jpg");
 }
 
 .main_column {
@@ -38,22 +38,4 @@ body {
   color: #FFF;
   font-size: 32px;
   padding-top:40px;
-}
-
-ul li {
-  font-family: 'robotoregular', sans-serif;
-  font-weight: 400;
-  text-transform: uppercase;
-  display: inline-block;
-  font-size: 14px;
-  border: solid #f2f6f6 1px;
-  margin-left: -4px;
-}
-
-.current {
-  border: solid #00b874 1px !important;
-  margin-left: 0 !important;
-}
-.current a {
-  color: #00b874;
 }
