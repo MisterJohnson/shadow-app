@@ -12,9 +12,20 @@ ul li {
   margin-left: -4px;
 }
 
-li:hover {
-  border: solid #00b874 1px !important;
-  margin-left: 0 !important;
+ul li:first-child {
+  margin-left: -1px;
+}
+
+ul li:hover {
+  margin-left: -5px;
+}
+
+ul li:first-child:hover {
+  margin-left: -1px;
+}
+
+ul li a:hover {
+  border: solid #00b874 1px;
 }
 
 .active {

@@ -13,19 +13,8 @@ import { ArticleService } from './services/article.service';
 import { MenuComponent } from './components/menu/menu.component';
 
 const appRoutes: Routes = [
-  {
-    path: 'characters',
-    component: CharacterComponent,
-    data: { title: 'Character List' }
-  },
-  { path: 'characters',
-    redirectTo: '/characters',
-    pathMatch: 'full'
-  },
-  { path: 'home',
-    component: HomeComponent,
-    data: { title : 'Welcome to the sixth world' }
-  }
+  { path: '', component: HomeComponent, data: { title : 'Welcome to the sixth world' } },
+  { path: 'characters', component: CharacterComponent }
 ];
 
 @NgModule({
