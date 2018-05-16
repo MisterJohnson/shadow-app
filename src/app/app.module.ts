@@ -11,6 +11,7 @@ import { ArticlesComponent } from './components/articles/articles.component';
 
 import { ArticleService } from './services/article.service';
 import { MenuComponent } from './components/menu/menu.component';
+import { CharacterCardComponent } from './components/character-card/character-card.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent, data: { title : 'Welcome to the sixth world' } },
@@ -23,7 +24,8 @@ const appRoutes: Routes = [
     CharacterComponent,
     HomeComponent,
     ArticlesComponent,
-    MenuComponent
+    MenuComponent,
+    CharacterCardComponent
   ],
   imports: [
     BrowserModule,
