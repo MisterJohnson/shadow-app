@@ -1,23 +1,23 @@
 <div class="navbar">
   <ul class="nav">
     <li>
-      <a [routerLink]="['']" [routerLinkActive]="['active']" >
+      <a [routerLink]="['home']" [routerLinkActive]="['active']" (click)="setTitle('Home')">
         Home
       </a>
     </li>
     <li>
-      <a [routerLink]="['characters']" [routerLinkActive]="['active']" >
+      <a [routerLink]="['characters']" [routerLinkActive]="['active']" (click)="setTitle('Characters')">
         Characters
       </a>
     </li>
     <li>
-      <a href="./newsfeed">JackPoint</a>
+      <a href="./newsfeed" (click)="setTitle('Jackpoint')">JackPoint</a>
     </li>
     <li>
-      <a href="./contact">Contact</a>
+      <a href="./contact" (click)="setTitle('Contact')">Contact</a>
     </li>
     <li>
-      <a href="./admin">Admin Panel</a>
+      <a href="./admin" (click)="setTitle('Admin Panel')">Admin Panel</a>
     </li>
   </ul>
 </div>

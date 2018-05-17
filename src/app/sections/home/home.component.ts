@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -8,14 +8,12 @@ import { HttpClient } from '@angular/common/http';
 })
 export class HomeComponent implements OnInit {
 
-  characters: any;
+  title: string;
 
-  constructor(private http: HttpClient) { }
-
-  ngOnInit() {
-    this.http.get('/character').subscribe(data => {
-      this.characters = data;
-    });
+  constructor(private http: HttpClient) {
+    this.title = 'Future is over-rated!';
   }
+
+  ngOnInit() {}
 
 }

@@ -8,6 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class CharacterComponent implements OnInit {
 
+  title: 'Shadowrunners be warned';
   characters: any;
 
   constructor(private http: HttpClient) { }

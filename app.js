@@ -19,7 +19,7 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({'extended':'false'}));
 app.use(express.static(path.join(__dirname, 'dist')));
-app.use('/characters', express.static(path.join(__dirname, 'dist')));
+//app.use('/characters', express.static(path.join(__dirname, 'dist')));
 app.use('/character', character);
 app.use('/articles', express.static(path.join(__dirname, 'dist')));
 app.use('/article', article);

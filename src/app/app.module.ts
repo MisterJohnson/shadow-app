@@ -8,13 +8,12 @@ import { AppComponent } from './app.component';
 import { CharacterComponent } from './sections/character/character.component';
 import { HomeComponent } from './sections/home/home.component';
 import { ArticlesComponent } from './components/articles/articles.component';
-
-import { ArticleService } from './services/article.service';
 import { MenuComponent } from './components/menu/menu.component';
 import { CharacterCardComponent } from './components/character-card/character-card.component';
 
 const appRoutes: Routes = [
-  { path: '', component: HomeComponent, data: { title : 'Welcome to the sixth world' } },
+  { path: '', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
   { path: 'characters', component: CharacterComponent }
 ];
 
