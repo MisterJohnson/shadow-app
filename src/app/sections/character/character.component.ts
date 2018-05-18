@@ -8,10 +8,12 @@ import { HttpClient } from '@angular/common/http';
 })
 export class CharacterComponent implements OnInit {
 
-  title: 'Shadowrunners be warned';
+  title: string;
   characters: any;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    this.title = 'Shadowrunners be warned';
+  }
 
   ngOnInit() {
     this.http.get('/character').subscribe(data => {
