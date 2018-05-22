@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import {Title} from '@angular/platform-browser';
+import { AccordionComponent } from 'angularx-accordion';
+import {AccordionToggleComponent } from 'angularx-accordion';
+import { Accordion } from 'angularx-accordion/accordion';
 
 @Component({
   selector: 'app-root',

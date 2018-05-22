@@ -10,6 +10,7 @@ import { HomeComponent } from './sections/home/home.component';
 import { ArticlesComponent } from './components/articles/articles.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { CharacterCardComponent } from './components/character-card/character-card.component';
+import { AccordionModule } from 'angularx-accordion';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -29,6 +30,7 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     FormsModule,
+    AccordionModule,
     HttpClientModule,
     RouterModule.forRoot(
       appRoutes,
