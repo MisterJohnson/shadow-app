@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-character',
   templateUrl: './character.component.html',
-  styleUrls: ['../../app.component.css', './character.component.css']
+  styleUrls: ['../../app.component.scss', './character.component.scss']
 })
 export class CharacterComponent implements OnInit {
 
