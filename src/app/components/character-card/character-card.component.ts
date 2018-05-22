@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import {AccordionComponent} from '../accordion/accordion.component';
 
 @Component({
   selector: 'app-character-card',

@@ -21,6 +21,8 @@
     "@angular/platform-browser": "^5.2.0",
     "@angular/platform-browser-dynamic": "^5.2.0",
     "@angular/router": "^5.2.0",
+    "@fortawesome/fontawesome": "^1.1.8",
+    "angularx-accordion": "^1.0.7",
     "bluebird": "^3.5.1",
     "body-parser": "^1.18.2",
     "core-js": "^2.4.1",
