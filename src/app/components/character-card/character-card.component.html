@@ -1,6 +1,8 @@
 <div class="characters">
   <hr />
-    <div *ngFor="let character of characters" [title]="character.name">
+  <h2>Available Characters</h2>
+  <accordion>
+    <accordion-group *ngFor="let character of characters" [title]="character.name" heading="{{character.name}} ->">
       <div>
         <div class="fields name">
           <h3>{{character.name}}</h3>  <!-- NAME -->
@@ -75,5 +77,6 @@
           </p>
         </div>
       </div>
-    </div>
+    </accordion-group>
+  </accordion>
 </div>

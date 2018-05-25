@@ -25,9 +25,11 @@
     "angularx-accordion": "^1.0.7",
     "bluebird": "^3.5.1",
     "body-parser": "^1.18.2",
+    "bootstrap": "^3.3.7",
     "core-js": "^2.4.1",
     "express": "^4.16.3",
     "mongoose": "^5.0.10",
+    "ngx-bootstrap": "^3.0.0",
     "rxjs": "^5.5.6",
     "serve-favicon": "^2.4.5",
     "zone.js": "^0.8.19"
