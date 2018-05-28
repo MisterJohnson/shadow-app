@@ -1,7 +1,10 @@
+$mainColor:#484848;
+
 .navbar{
   position:absolute;
   top: 0;
   left: 50%;
+  background-color: $mainColor;
 }
 
 .nav {
@@ -14,7 +17,7 @@ ul li {
   text-transform: uppercase;
   display: inline-block;
   font-size: 14px;
-  border: solid #f2f6f6 1px;
+  border: solid $mainColor 1px;
   margin-left: -4px;
 }
 
@@ -31,12 +34,12 @@ ul li:first-child:hover {
 }
 
 ul li a:hover {
+  color: #00b874;
   border: solid #00b874 1px;
+  background-color: $mainColor;
 }
 
 .active {
-  border: solid #00b874 1px !important;
-}
-.active a {
   color: #00b874;
+  border: solid #00b874 1px !important;
 }

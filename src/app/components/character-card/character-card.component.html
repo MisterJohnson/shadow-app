@@ -2,81 +2,47 @@
   <hr />
   <h2>Available Characters</h2>
   <accordion>
-    <accordion-group *ngFor="let character of characters" [title]="character.name" heading="{{character.name}} ->">
-      <div>
-        <div class="fields name">
-          <h3>{{character.name}}</h3>  <!-- NAME -->
-        </div>
-        <hr />
-        <div class="fields">
-          <h4>Runner name : {{character.alias}} <!-- NICKNAME --></h4>
-        </div>
-        <div class="fields picture"> <!-- PRIORITY -->
-          <p class="swag">
-            <img src="../../../assets/images/{{character.picture}}" alt="image of the character" width="150"> <!-- PICTURE -->
-          </p>
-          <h5>Character Priority</h5>
-          <div class="priority" *ngFor="let priority of character.priority">
-            <div class="datalinked"> <!-- METATYPE BOX -->
-              <h6>Metatype</h6>
-              <p class="multiline">
-                <strong>Race: </strong><br />
-                <span>
-              {{priority.metatype.race}} - {{priority.metatype.sub_race}}
-            </span>
-              </p>
-              <p>
-                <strong>Priority points: </strong><br />
-                <span>
-              {{priority.metatype.priority_pts}} pts
-            </span>
-              </p>
-            </div> <!-- METATYPE BOX END -->
-            <div class="datalinked"> <!-- ATTRIBUTE BOX -->
-              <h6>Attributes</h6>
-              <p>
-                <strong>Attributes points: </strong><br />
-                {{priority.attributes}} pts
-              </p>
-            </div> <!-- ATTRIBUTE BOX END -->
-            <div class="datalinked"> <!-- SKILLS BOX -->
-              <h6>Skills</h6>
-              <p class="multiline">
-                <strong>Skills points : </strong><br />
-                {{priority.skills.skill_pts}} pts
-              </p>
-              <p>
-                <strong>Skill group points : </strong><br />
-                {{priority.skills.skill_group_pts}} pts
-              </p>
-            </div> <!-- SKILLS BOX END -->
-            <div class="datalinked"> <!-- MAGIC BOX -->
-              <h6>Magic</h6>
-              <p class="multiline">
-                <strong>Awakening type : </strong><br />
-                {{priority.magic.type}} {{priority.magic.rating}}
-              </p>
-              <p>
-                <strong>Chosen Skills : </strong><br />
-                <span class="span list" *ngFor="let magic of priority.magic.magic_skills">{{magic.skill}} r.{{magic.rating}} <br /></span>
-              </p>
-            </div> <!-- MAGIC BOX END -->
-            <div class="datalinked"> <!-- MAGIC BOX -->
-              <h6>Ressources</h6>
-              <p>
-                <strong>Assets : </strong><br />
-                {{priority.ressources}} $
-              </p>
-            </div> <!-- MAGIC BOX END -->
-          </div>
-        </div>
-        <div class="fields">
-          <p>
-            <strong>Background : </strong>    <!-- BACKGROUND -->
-            {{character.background}}
-          </p>
-        </div>
+    <accordion-group *ngFor="let character of characters" [title]="character.name" heading="{{character.alias}} ->">
+      <div class="fields picture"> <!-- PRIORITY -->
+        <p class="swag">
+          <img src="../../../assets/images/{{character.picture}}" alt="image of the character" width="150"> <!-- PICTURE -->
+        </p>
       </div>
+      <table>
+        <tr>
+          <th scope="row">Sin</th>
+          <td>{{character.name}}</td>
+        </tr>
+        <tbody *ngFor="let priority of character.priority">
+          <tr>
+            <th scope="row">Metatype</th>
+            <td>{{priority.metatype.race}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Attributes</th>
+            <td>{{priority.attributes}} attributes points</td>
+          </tr>
+          <tr>
+            <th scope="row">Skills</th>
+            <td>{{priority.skills.skill_pts}} pts / {{priority.skills.skill_group_pts}} group pts</td>
+          </tr>
+          <tr>
+            <th scope="row">Magic</th>
+            <td class="multiline">
+              {{priority.magic.type}} {{priority.magic.rating}}, <br />
+              <span class="span list" *ngFor="let magic of priority.magic.magic_skills">{{magic.skill}} {{magic.rating}},</span>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Ressources</th>
+            <td>{{priority.ressources}} nuyens</td>
+          </tr>
+        </tbody>
+        <tr>
+          <th scope="row">Background</th>
+          <td>{{character.background}}</td>
+        </tr>
+      </table>
     </accordion-group>
   </accordion>
 </div>

@@ -1,37 +1,42 @@
-article {
-  padding-left: 10px;
-}
-
-article h3 {
-
+h2 {
+  color: #FFFFFF;
+  margin: 0 10px;
 }
 
 .priority, .picture {
   position: relative;
 }
-
 .swag {
   float: left;
 }
-
-.datalinked {
-  float: left;
-  width: 16%;
-  padding:5px;
-  font-size: 12px;
-  min-height: 160px;
-  min-width: 118px;
-  border: 1px solid #9F9F9F;
-}
-
-.datalinked h6 {
-  font-size: 14px;
-}
-
-.datalinked p.multiline {
-  border-bottom: 1px solid #9F9F9F;
-}
-
 .fields {
   clear: both;
+}
+
+.panel-group {
+  margin: 0 10px;
+}
+
+table {
+  width: 350px;
+  background-color: #1d1d1d;
+  color: #FFFFFF;
+  font-family: 'robotolight', sans-serif;
+  font-size: 12px;
+  th {
+    width: 33%;
+    border: solid 1px #f59331;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 3px;
+    vertical-align: top;
+  }
+  tr {
+    border: solid 1px #f59331;
+  }
+  td {
+    width: 33%;
+    border: solid 1px #f59331;
+    padding: 3px;
+  }
 }
