@@ -11,11 +11,13 @@ import { ArticlesComponent } from './components/articles/articles.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { CharacterCardComponent } from './components/character-card/character-card.component';
 import { SharedBootstrapModule } from './shared/shared-bootstrap.module';
+import { CharacterCreateComponent } from './sections/character-create/character-create.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
-  { path: 'characters', component: CharacterComponent }
+  { path: 'characters', component: CharacterComponent },
+  { path: 'character-create', component: CharacterComponent }
 ];
 
 @NgModule({
@@ -25,7 +27,8 @@ const appRoutes: Routes = [
     HomeComponent,
     ArticlesComponent,
     MenuComponent,
-    CharacterCardComponent
+    CharacterCardComponent,
+    CharacterCreateComponent
   ],
   imports: [
     BrowserModule,
