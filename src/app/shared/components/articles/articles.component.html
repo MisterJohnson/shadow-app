@@ -1,0 +1,16 @@
+<div class="articles">
+  <hr />
+  <article *ngFor="let article of articles">
+    <h3>{{article.title}}</h3>
+    <span class="thumbnails">
+            <img src="{{article.assets}}" alt="shadowrun logo"/>
+    </span>
+    <p class="description" [innerHTML]="article.description">
+    </p>
+    <div class="metadata">
+      <strong>{{article.date | date:'MM/dd/yyyy'}}</strong>
+      <a *ngFor="let cat of article.metadata" href="/{{cat}}">{{cat}}</a>
+    </div>
+  </article>
+  <hr />
+</div>

@@ -15,7 +15,7 @@ var CharacterSchema = new mongoose.Schema({
 
 // Object containing the information of the character
   inventory: Object,
-  priority: Object,
+  priority: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Priority' }],
   attributes: Object,
   skills: Object,
   augmentations: Object,

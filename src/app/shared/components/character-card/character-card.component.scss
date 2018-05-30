@@ -1,0 +1,53 @@
+h2 {
+  color: #FFFFFF;
+  margin: 0 10px;
+}
+
+.priority, .picture {
+  position: relative;
+}
+.swag {
+  float: left;
+}
+.fields {
+  clear: both;
+}
+
+.panel-group {
+  margin: 0 10px;
+}
+
+table {
+  width: 350px;
+  background-color: #1d1d1d;
+  color: #FFFFFF;
+  font-family: 'robotolight', sans-serif;
+  font-size: 12px;
+  th {
+    width: 33%;
+    border: solid 1px #f59331;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 3px;
+    vertical-align: top;
+  }
+  tr {
+    border: solid 1px #f59331;
+  }
+  td {
+    width: 33%;
+    border: solid 1px #f59331;
+    padding: 3px;
+  }
+}
+
+.select_tab ::ng-deep {
+  .nav.nav-tabs {
+    height: 50px;
+  }
+  .tab-content{
+    width: 50%;
+    float: left;
+    padding-top: 10px;
+  }
+}

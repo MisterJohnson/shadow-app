@@ -1,0 +1,45 @@
+$mainColor:#484848;
+
+.navbar{
+  position:absolute;
+  top: 0;
+  left: 50%;
+  background-color: $mainColor;
+}
+
+.nav {
+  padding-left: 3px;
+}
+
+ul li {
+  font-family: 'robotoregular', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  display: inline-block;
+  font-size: 14px;
+  border: solid $mainColor 1px;
+  margin-left: -4px;
+}
+
+ul li:first-child {
+  margin-left: -1px;
+}
+
+ul li:hover {
+  margin-left: -5px;
+}
+
+ul li:first-child:hover {
+  margin-left: -1px;
+}
+
+ul li a:hover {
+  color: #00b874;
+  border: solid #00b874 1px;
+  background-color: $mainColor;
+}
+
+.active {
+  color: #00b874;
+  border: solid #00b874 1px !important;
+}

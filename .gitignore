@@ -59,8 +59,4 @@ typings/
 
 .idea/*
 
-.DS_Store
 dist/
-src/.DS_Store
-src/app/.DS_Store
-src/assets/.DS_Store

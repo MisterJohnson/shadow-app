@@ -1,0 +1,23 @@
+<div class="navbar">
+  <ul class="nav">
+    <li>
+      <a [routerLink]="['']" [routerLinkActive]="['active']" (click)="setTitle('Home')">
+        Home
+      </a>
+    </li>
+    <li>
+      <a [routerLink]="['characters']" [routerLinkActive]="['active']" (click)="setTitle('Characters')">
+        Characters
+      </a>
+    </li>
+    <li>
+      <a href="./newsfeed" (click)="setTitle('Jackpoint')">JackPoint</a>
+    </li>
+    <li>
+      <a href="./contact" (click)="setTitle('Contact')">Contact</a>
+    </li>
+    <li>
+      <a href="./admin" (click)="setTitle('Admin Panel')">Admin Panel</a>
+    </li>
+  </ul>
+</div>

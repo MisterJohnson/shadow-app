@@ -2,10 +2,11 @@ var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
 var Character = require('../models/Character.js');
+var Priority = require('../models/Priority.js');
 
 /* GET ALL CHARACTERS */
 router.get('/', function(req, res, next) {
-  Character.find(function (err, characters) {
+  Character.find().populate('priority').exec(function (err, characters) {
     if (err) return next(err);
     res.json(characters);
   });
@@ -20,7 +21,7 @@ router.get('/:id', function(req, res, next) {
 });
 
 /* SAVE CHARACTER */
-router.post('/', function(req, res, next) {
+router.post('/save', function(req, res, next) {
   Character.create(req.body, function (err, post) {
     if (err) return next(err);
     res.json(post);
