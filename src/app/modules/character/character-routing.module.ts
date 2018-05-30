@@ -5,7 +5,7 @@ import {CharacterComponent} from './character.component';
 
 const routes: Routes = [
   { path: '', component: CharacterComponent },
-  { path: 'character-create', component: CharacterCreateComponent },
+  { path: 'create', component: CharacterCreateComponent },
 ];
 
 @NgModule({
