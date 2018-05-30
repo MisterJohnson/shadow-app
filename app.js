@@ -3,26 +3,32 @@ var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
+var passport = require('passport');
+var config = require('./config/database');
 
 var mongoose = require('mongoose');
 mongoose.Promise = require('bluebird');
-mongoose.connect('mongodb://simonlepage:Jackpot50@shadowrun-shard-00-00-g1ocb.mongodb.net:27017,shadowrun-shard-00-01-g1ocb.mongodb.net:27017,shadowrun-shard-00-02-g1ocb.mongodb.net:27017/sr5?ssl=true&replicaSet=shadowrun-shard-0&authSource=admin',
+mongoose.connect(config.database,
   { promiseLibrary: require('bluebird') })
   .then(() =>  console.log('connection succesful'))
   .catch((err) => console.error(err));
 
 var character = require('./routes/character');
 var article = require('./routes/article');
+var user = require('./routes/user');
+
 var app = express();
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({'extended':'false'}));
 app.use(express.static(path.join(__dirname, 'dist')));
+app.use(passport.initialize());
 //app.use('/characters', express.static(path.join(__dirname, 'dist')));
 app.use('/character', character);
 app.use('/articles', express.static(path.join(__dirname, 'dist')));
 app.use('/article', article);
+app.use('/user', user);
 app.use('/*', express.static(path.join(__dirname, 'dist')));
 
 // catch 404 and forward to error handler

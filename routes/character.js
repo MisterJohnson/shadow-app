@@ -21,7 +21,7 @@ router.get('/:id', function(req, res, next) {
 });
 
 /* SAVE CHARACTER */
-router.post('/', function(req, res, next) {
+router.post('/save', function(req, res, next) {
   Character.create(req.body, function (err, post) {
     if (err) return next(err);
     res.json(post);
