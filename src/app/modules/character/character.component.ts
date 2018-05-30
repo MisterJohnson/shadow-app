@@ -11,7 +11,7 @@ export class CharacterComponent implements OnInit {
   title: string;
   characters: any;
 
-  constructor(private http: HttpClient) {
+  constructor(public http: HttpClient) {
     this.title = 'Shadowrunners be warned';
   }
 

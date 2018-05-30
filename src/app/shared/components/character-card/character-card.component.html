@@ -1,6 +1,6 @@
 <div class="characters">
   <hr />
-  <h2>Available Characters <a [routerLink]="['/character-create']"><i class="glyphicon glyphicon-plus" style="color:#FFF;"></i></a></h2>
+  <h2>Available Characters <a [routerLink]="['/characters/create']"><i class="glyphicon glyphicon-plus" style="color:#FFF;"></i></a></h2>
   <accordion>
     <accordion-group *ngFor="let character of characters" [title]="character.name" heading="{{character.alias}} ->">
       <div class="fields picture"> <!-- PRIORITY -->
