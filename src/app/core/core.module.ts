@@ -10,8 +10,6 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { RouterModule } from '@angular/router';
 import { AuthenticationService } from './services/authentication.service';
 import { AuthGuardService } from './services/auth-guard.service';
-import { HomeComponent } from '../modules/home/home.component';
-import { ArticlesComponent } from '../components/articles/articles.component';
 import { MenuComponent } from '../components/menu/menu.component';
 
 @NgModule({
@@ -21,10 +19,11 @@ import { MenuComponent } from '../components/menu/menu.component';
     FormsModule,
     HttpClientModule
   ],
-  declarations: [LoginComponent, HeaderComponent, NotFoundComponent, HomeComponent, ArticlesComponent, MenuComponent],
+  declarations: [LoginComponent, HeaderComponent, NotFoundComponent, MenuComponent],
   exports: [
     RouterModule,
-    HeaderComponent
+    HeaderComponent,
+    MenuComponent
   ],
   providers: [
     AuthenticationService,
