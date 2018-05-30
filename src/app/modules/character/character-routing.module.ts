@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {CharacterCreateComponent} from '../character-create/character-create.component';
+import {CharacterCreateComponent} from '../../shared/components/character-create/character-create.component';
 import {CharacterComponent} from './character.component';
 
 const routes: Routes = [

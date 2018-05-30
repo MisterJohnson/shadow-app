@@ -10,7 +10,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { RouterModule } from '@angular/router';
 import { AuthenticationService } from './services/authentication.service';
 import { AuthGuardService } from './services/auth-guard.service';
-import { MenuComponent } from '../components/menu/menu.component';
+import { MenuComponent } from '../shared/components/menu/menu.component';
 
 @NgModule({
   imports: [
