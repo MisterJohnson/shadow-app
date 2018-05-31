@@ -9,7 +9,7 @@ const routes: Routes = [
   { path: 'characters', loadChildren: '../modules/character/character.module#CharacterModule' },
   { path: 'login', component: LoginComponent },
   { path: 'admin', canActivate: [AuthGuardService], loadChildren: '../modules/admin/admin.module#AdminModule' },
-  { path: 'form', loadChildren: '../form/form.module#FormModule' },
+  { path: 'form', loadChildren: '../form/form.module#BaseFormModule' },
   { path: '**', component: NotFoundComponent}
 ];
 

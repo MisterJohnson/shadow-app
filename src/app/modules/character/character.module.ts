@@ -12,6 +12,6 @@ import { SharedBootstrapModule } from '../../shared/shared-bootstrap.module';
     CharacterRoutingModule,
     SharedBootstrapModule
   ],
-  declarations: [CharacterComponent, CharacterCreateComponent, CharacterCardComponent]
+  declarations: [CharacterComponent, CharacterCreateComponent, CharacterCardComponent],
 })
 export class CharacterModule { }
