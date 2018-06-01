@@ -13,8 +13,20 @@ h2 {
   clear: both;
 }
 
-.panel-group {
-  margin: 0 10px;
+.accordion_group ::ng-deep {
+  border-color: #484848;
+  .panel-default {
+    border-color: #484848;
+  }
+  .panel-body.card-block.card-body {
+    margin: 0 10px;
+    background-color: #484848;
+    border-color: #484848;
+  }
+  .panel-collapse, .collapse{
+    background-color: #484848;
+    border-color: #484848;
+  }
 }
 
 table {
@@ -44,6 +56,7 @@ table {
 .select_tab ::ng-deep {
   .nav.nav-tabs {
     height: 50px;
+    border: none;
   }
   .tab-content{
     width: 50%;
