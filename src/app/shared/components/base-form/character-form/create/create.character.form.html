@@ -1,0 +1,68 @@
+<div class="form">
+  <form [formGroup]="group" (ngSubmit)="onSubmit()">
+    <div class="form-control">
+      <label for="name">Name :</label>
+      <input id="name" formControlName="name">
+    </div>
+    <div class="form-control">
+      <label for="alias">Alias :</label>
+      <input id="alias" formControlName="alias">
+    </div>
+    <div class="form-control">
+      <label for="current_karma">Current Karma :</label>
+      <input id="current_karma" formControlName="current_karma">
+    </div>
+    <button type="submit"
+            class="btn btn-success">Save</button>
+  </form>
+  <div class="display-info preview">
+    <tabset ngClass="select_tab">
+      <tab heading="Priority Selection" id="tab1">
+        <table>
+          <tr>
+            <th scope="row">Sin</th>
+            <td>{{ group.get('name').value }}</td>
+          </tr>
+          <!-- <tbody *ngFor="let priority of character.priority">
+          <tr>
+            <th scope="row">Metatype</th>
+            <td>{{priority.metatype.race}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Attributes</th>
+            <td>{{priority.attributes}} attributes points</td>
+          </tr>
+          <tr>
+            <th scope="row">Skills</th>
+            <td>{{priority.skills.skill_pts}} pts / {{priority.skills.skill_group_pts}} group pts</td>
+          </tr>
+          <tr>
+            <th scope="row">Magic</th>
+            <td class="multiline">
+              {{priority.magic.type}} {{priority.magic.rating}}, <br />
+              <span class="span list" *ngFor="let magic of priority.magic.magic_skills">{{magic.skill}} {{magic.rating}},</span>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Ressources</th>
+            <td>{{priority.ressources}} nuyens</td>
+          </tr>
+          </tbody> -->
+        </table>
+      </tab>
+      <tab heading="Attribute Table">Other Information</tab>
+      <tab heading="Other Information">
+        <table>
+          <tr>
+            <th scope="row">Alias</th>
+            <td>{{ group.get('alias').value }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Current Karma</th>
+            <td>{{ group.get('current_karma').value }}</td>
+          </tr>
+        </table>
+      </tab>
+    </tabset>
+  </div>
+</div>

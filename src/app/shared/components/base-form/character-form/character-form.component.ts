@@ -1,6 +1,7 @@
 import {BaseFormComponent} from '../base-form.component';
 import {Character} from '../../../models/character-model';
 import {FormControl, Validators} from '@angular/forms';
+import {DISABLED} from '@angular/forms/src/model';
 
 export abstract class CharacterFormComponent extends BaseFormComponent {
   character: Character;
@@ -20,8 +21,8 @@ export abstract class CharacterFormComponent extends BaseFormComponent {
       ]
     ));
     this.form.addControl('current_karma', new FormControl(
-      this.character.current_karma, [
-        Validators.required
+      {value: this.character.current_karma, disabled: true}, [
+        Validators.required,
       ]
     ));
     this.form.addControl('spent_karma', new FormControl(

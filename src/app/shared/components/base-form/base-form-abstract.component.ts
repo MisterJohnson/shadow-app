@@ -13,6 +13,7 @@ export abstract class BaseFormAbstractComponent {
     if (!this.form.valid) {
       return;
     }
+    console.log(this.form.get('name').value);
   }
 
   protected constructor() { }

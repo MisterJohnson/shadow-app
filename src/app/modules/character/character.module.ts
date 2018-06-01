@@ -5,13 +5,16 @@ import { CharacterCreateComponent } from '../../shared/components/character-crea
 import { CharacterCardComponent } from '../../shared/components/character-card/character-card.component';
 import { CharacterComponent } from './character.component';
 import { SharedBootstrapModule } from '../../shared/shared-bootstrap.module';
+import { CreateCharacterFormComponent } from '../../shared/components/base-form/character-form/create/create.character.form';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
     CharacterRoutingModule,
-    SharedBootstrapModule
+    SharedBootstrapModule,
+    ReactiveFormsModule
   ],
-  declarations: [CharacterComponent, CharacterCreateComponent, CharacterCardComponent]
+  declarations: [CharacterComponent, CharacterCreateComponent, CharacterCardComponent, CreateCharacterFormComponent]
 })
 export class CharacterModule { }

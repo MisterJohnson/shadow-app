@@ -1,9 +1,9 @@
 import {BaseFormAbstractComponent} from './base-form-abstract.component';
 import {FormGroup} from '@angular/forms';
 
-export class BaseFormComponent extends BaseFormAbstractComponent {
+export abstract class BaseFormComponent extends BaseFormAbstractComponent {
 
-  constructor() {
+  protected constructor() {
     super();
     this.form = new FormGroup({}, { updateOn: 'blur' });
   }
