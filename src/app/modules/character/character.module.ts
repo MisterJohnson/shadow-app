@@ -6,7 +6,9 @@ import { CharacterCardComponent } from '../../shared/components/character-card/c
 import { CharacterComponent } from './character.component';
 import { SharedBootstrapModule } from '../../shared/shared-bootstrap.module';
 import { CreateCharacterFormComponent } from '../../shared/components/base-form/character-form/create/create.character.form';
-import {ReactiveFormsModule} from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { StepsComponent } from '../../shared/components/steps/steps.component';
+import { StepComponent } from '../../shared/components/step/step.component';
 
 @NgModule({
   imports: [
@@ -15,6 +17,13 @@ import {ReactiveFormsModule} from '@angular/forms';
     SharedBootstrapModule,
     ReactiveFormsModule
   ],
-  declarations: [CharacterComponent, CharacterCreateComponent, CharacterCardComponent, CreateCharacterFormComponent]
+  declarations: [
+    CharacterComponent,
+    CharacterCreateComponent,
+    CharacterCardComponent,
+    CreateCharacterFormComponent,
+    StepsComponent,
+    StepComponent
+  ]
 })
 export class CharacterModule { }

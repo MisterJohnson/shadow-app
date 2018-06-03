@@ -3,7 +3,7 @@
   <h2>Available Characters <a [routerLink]="['/characters/create']"><i class="glyphicon glyphicon-plus" style="color:#FFF;"></i></a></h2>
   <accordion>
     <accordion-group ngClass="accordion_group" *ngFor="let character of characters" [title]="character.name" heading="{{character.alias}} ->">
-      <div class="fields picture"> <!-- PRIORITY -->
+      <div class="fields picture">
         <p class="swag">
           <img src="../../../../assets/images/{{character.picture}}" alt="image of the character" width="150" /> <!-- PICTURE -->
         </p>
@@ -49,7 +49,6 @@
         <tab heading="Attribute Table">Basic content for tab 2</tab>
         <tab heading="Tab 3">Basic content for tab 3</tab>
       </tabset>
-
     </accordion-group>
   </accordion>
 </div>
