@@ -1,4 +1,4 @@
-<div class="step btn btn-info" [class.btn-primary]="!data.current" [class.btn-info]="data.current" (click)="data.toggle()">
+<div class="step btn btn-info" [class.btn-primary]="!data.current" [class.btn-info]="data.current" (click)="toggle()">
   <div class="big count" ngClass="{'current': data.current === true}">{{data.actual_step}}</div>
   <div class="title">{{data.title}}</div>
 </div>

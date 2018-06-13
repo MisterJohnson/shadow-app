@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import { Step } from '../../models/step-model';
 
 @Component({
@@ -8,4 +8,9 @@ import { Step } from '../../models/step-model';
 })
 export class StepComponent {
   @Input() data: Step;
+  @Output() selected = new EventEmitter<Step>();
+
+  toggle() {
+    this.selected.emit(this.data);
+  }
 }
