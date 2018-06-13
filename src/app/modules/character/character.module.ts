@@ -9,6 +9,8 @@ import { CreateCharacterFormComponent } from '../../shared/components/base-form/
 import { ReactiveFormsModule } from '@angular/forms';
 import { StepsComponent } from '../../shared/components/steps/steps.component';
 import { StepComponent } from '../../shared/components/step/step.component';
+import { ModalComponent } from '../../shared/components/modals/component-modal/modal.component';
+import { ModalContentComponent } from '../../shared/components/modals/content-modal/modal.content.component';
 
 @NgModule({
   imports: [
@@ -22,6 +24,13 @@ import { StepComponent } from '../../shared/components/step/step.component';
     CharacterCreateComponent,
     CharacterCardComponent,
     CreateCharacterFormComponent,
+    StepsComponent,
+    StepComponent,
+    ModalComponent,
+    ModalContentComponent
+  ],
+  entryComponents: [
+    ModalContentComponent,
     StepsComponent,
     StepComponent
   ]
