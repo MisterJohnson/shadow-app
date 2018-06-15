@@ -3,6 +3,7 @@ import { BsModalService } from 'ngx-bootstrap/modal';
 import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
 import { Step } from '../../../models/step-model';
 import { StepsComponent } from '../../steps/steps.component';
+import { DynamicContentComponent } from '../../dynamic-content/dynamic-content.component';
 
 @Component({
   selector: 'app-modal',
@@ -15,16 +16,9 @@ export class ModalComponent implements OnInit {
   constructor(private modalService: BsModalService) {}
 
   ngOnInit() {
-    const initialState = {
-      steps: [
-        new Step('1', 'Priority Selection'),
-        new Step('2', 'Character Creation'),
-        new Step('3', 'Character Validation'),
-        new Step('4', 'Finalisation')
-      ]
-    };
+    const initialState = {};
 
-    this.bsModalRef = this.modalService.show(StepsComponent, {initialState});
+    this.bsModalRef = this.modalService.show(DynamicContentComponent, {initialState});
     this.bsModalRef.content.closeBtnName = 'Close';
   }
 

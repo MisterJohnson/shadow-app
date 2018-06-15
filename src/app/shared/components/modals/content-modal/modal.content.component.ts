@@ -9,11 +9,10 @@ import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
 export class ModalContentComponent implements OnInit {
   title: string;
   closeBtnName: string;
-  list: any[] = [];
   constructor(public bsModalRef: BsModalRef) {}
 
   ngOnInit() {
-    this.list.push('PROFIT!!!');
+
   }
 
 }

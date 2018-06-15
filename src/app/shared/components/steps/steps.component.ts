@@ -8,12 +8,22 @@ import {forEach} from '@angular/router/src/utils/collection';
   styleUrls: ['./steps.component.scss']
 })
 export class StepsComponent implements OnInit {
-  steps: Step[];
+  public steps: Step[];
 
-  constructor() { }
+  constructor() {
+  }
+
+  setSteps(s: Step[]) {
+    this.steps = s;
+  }
 
   ngOnInit() {
-
+    this.setSteps([
+      new Step('1', 'Priority Selection'),
+      new Step('2', 'Character Creation'),
+      new Step('3', 'Character Validation'),
+      new Step('4', 'Finalisation')
+    ]);
   }
 
   onSelected(isSelected: Step) {
