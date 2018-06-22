@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import { AccordionComponent } from 'angularx-accordion';
-import {AccordionToggleComponent } from 'angularx-accordion';
+import { AccordionToggleComponent } from 'angularx-accordion';
 import { Accordion } from 'angularx-accordion/accordion';
+import { CharactersService } from '../../../services/characters/characters.service';
+import { Character } from '../../models/character-model';
 
 @Component({
   selector: 'app-character-card',
@@ -10,15 +12,17 @@ import { Accordion } from 'angularx-accordion/accordion';
   styleUrls: ['./character-card.component.scss']
 })
 export class CharacterCardComponent implements OnInit {
+  characters: Character[];
 
-  characters: any;
-
-  constructor(private http: HttpClient) { }
+  constructor(private characterService: CharactersService) {}
 
   ngOnInit() {
-    this.http.get('/character').subscribe(data => {
-      this.characters = data;
-    });
+    this.getCharacters();
+  }
+
+  getCharacters(): void {
+    this.characterService.getCharacters()
+      .subscribe(characters => this.characters = characters);
   }
 
 }

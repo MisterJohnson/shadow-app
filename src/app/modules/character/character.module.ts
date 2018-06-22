@@ -12,6 +12,8 @@ import { StepComponent } from '../../shared/components/step/step.component';
 import { ModalComponent } from '../../shared/components/modals/component-modal/modal.component';
 import { ModalContentComponent } from '../../shared/components/modals/content-modal/modal.content.component';
 import { DynamicContentComponent } from '../../shared/components/dynamic-content/dynamic-content.component';
+import { ImgComponent } from '../../shared/components/tags/img/img.component';
+import {CharactersService} from '../../services/characters/characters.service';
 
 @NgModule({
   imports: [
@@ -29,13 +31,17 @@ import { DynamicContentComponent } from '../../shared/components/dynamic-content
     StepComponent,
     ModalComponent,
     ModalContentComponent,
-    DynamicContentComponent
+    DynamicContentComponent,
+    ImgComponent
   ],
   entryComponents: [
     ModalContentComponent,
     StepsComponent,
     StepComponent,
     DynamicContentComponent
+  ],
+  providers: [
+    CharactersService
   ]
 })
 export class CharacterModule { }
