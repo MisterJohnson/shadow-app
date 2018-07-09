@@ -1,3 +1,5 @@
+import {Image} from './tags/image';
+
 export class Character {
   private _name: string;
   private _alias: string;
@@ -5,10 +7,11 @@ export class Character {
   private _spent_karma: number;
   private _physical_description: string[];
   private _background: string;
-  private _picture: object;
+  private _picture: Image;
   private _date_creation: Date;
   private _date_updated: Date;
   private _current_essence: number;
+  private _priority: object;
 
   constructor() {
     this._current_karma = 25;
@@ -66,11 +69,11 @@ export class Character {
     this._background = value;
   }
 
-  get picture(): object {
+  get picture(): Image {
     return this._picture;
   }
 
-  set picture(value: object) {
+  set picture(value: Image) {
     this._picture = value;
   }
 
@@ -96,5 +99,13 @@ export class Character {
 
   set current_essence(value: number) {
     this._current_essence = value;
+  }
+
+  get priority(): object {
+    return this._priority;
+  }
+
+  set priority(value: object) {
+    this._priority = value;
   }
 }

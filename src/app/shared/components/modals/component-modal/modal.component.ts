@@ -11,7 +11,6 @@ import { DynamicContentComponent } from '../../dynamic-content/dynamic-content.c
   styleUrls: ['./modal.component.scss']
 })
 export class ModalComponent implements OnInit {
-
   bsModalRef: BsModalRef;
   constructor(private modalService: BsModalService) {}
 

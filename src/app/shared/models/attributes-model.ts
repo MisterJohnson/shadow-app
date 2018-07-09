@@ -6,6 +6,8 @@ export abstract class AttributesModel {
   private _type: string;
   private _name: string;
   private _title: string;
+  private _width: string;
+  private _height: string;
 
   get src(): string {
     return this._src;
@@ -61,5 +63,21 @@ export abstract class AttributesModel {
 
   set name(value: string) {
     this._name = value;
+  }
+
+  get width(): string {
+    return this._width;
+  }
+
+  set width(value: string) {
+    this._width = value;
+  }
+
+  get height(): string {
+    return this._height;
+  }
+
+  set height(value: string) {
+    this._height = value;
   }
 }

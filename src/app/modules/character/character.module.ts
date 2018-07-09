@@ -13,14 +13,16 @@ import { ModalComponent } from '../../shared/components/modals/component-modal/m
 import { ModalContentComponent } from '../../shared/components/modals/content-modal/modal.content.component';
 import { DynamicContentComponent } from '../../shared/components/dynamic-content/dynamic-content.component';
 import { ImgComponent } from '../../shared/components/tags/img/img.component';
-import {CharactersService} from '../../services/characters/characters.service';
+import { CharactersService } from '../../services/characters/characters.service';
+import { NgxSmartModalModule } from 'ngx-smart-modal';
 
 @NgModule({
   imports: [
     CommonModule,
     CharacterRoutingModule,
     SharedBootstrapModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxSmartModalModule.forRoot()
   ],
   declarations: [
     CharacterComponent,

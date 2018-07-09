@@ -3,7 +3,11 @@
   <h2>Create a new character</h2>
   <div class="main area">
     <div class="clear"></div>
-    <app-modal></app-modal>
-    <app-create-character-form></app-create-character-form>
+    <button (click)="ngxSmartModalService.getModal('myModal').open()">Modify Priority</button>
+    <ngx-smart-modal #myModal identifier="myModal">
+      <h1>title</h1>
+      <button (click)="myModal.close()">Close</button>
+    </ngx-smart-modal>
+    <!--<app-create-character-form></app-create-character-form>-->
   </div>
 </div>
